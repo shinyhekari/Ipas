@@ -1,6 +1,6 @@
 使用軟體:kali virtualbox
 名詞:
-滲透測試
+滲透測試 progran=程序
 滲透測試是指一個具備資安知識與經驗、技術人員受僱主所託，為僱主的網路裝置、主機，類比駭客的手法對網路或主機進行攻擊測試，為的是發掘系統漏洞、並提出改善方法。
 步驟:
 1.確認網段中有哪些系統開啟
@@ -9,6 +9,9 @@
 4.是否有漏洞?
 5.Expolitation
 6.post-Expolitation
+
+
+
 防漏洞程式:openvas
 步驟
 1.連線?
@@ -19,5 +22,28 @@ xp的漏洞:
  如果使用者在受影響的系統上收到蓄意製作的 RPC 要求，則該弱點可能會允許遠端執行程式碼。 
  在 Microsoft Windows 2000、Windows XP、Windows Server 2003 系統上，攻擊者可以利用此弱點，不經驗證就執行任意程式碼。 此弱點也可能用來製作蠕蟲攻擊。
  MS-17-010
- 
+ 如何防禦攻擊?
+ :
+netstat-ano 找出process id 殺掉 
+指令:windows kill process
+Nmap:
+Nmap（網路對映器）是一款用於網路發現和安全審計的網路安全工具，它是自由軟體。軟體名字Nmap是Network Mapper的簡稱。通常情況下，Nmap用於：
+列舉網路主機清單
+管理服務升級排程
+監視主機
+服務執行狀況
+Nmap基本命令和典型用法
+Nmap 基本語法
+nmap [ <扫描类型> ...] [ <选项> ] { <扫描目标说明> }
+全面進攻性掃描（包括各種主機發現、埠掃描、版本掃描、OS掃描及預設指令碼掃描）:
+nmap -A -v target_ip
+Ping掃描:
+nmap -sn -v target_ip
+快速埠掃描:
+nmap -F -v target_ip
+版本掃描:
+nmap -sV -v target_ip 
+作業系統掃描:
+nmap -O -v target_ip
+
 
